@@ -133,4 +133,4 @@ results/     full test results and the failures worth reading
 
 ## Authorship
 
-I designed the chunking strategy, the retrieval and memory architecture, the prompts and the test sets, and built both workflows. JavaScript in the code nodes was written with Claude's help.
+I designed the chunking strategy, the retrieval and memory architecture, the prompts and the test sets, and built both workflows.
