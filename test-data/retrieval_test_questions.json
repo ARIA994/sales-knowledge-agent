@@ -1,0 +1,130 @@
+[
+  {
+    "id": 1,
+    "question": "What does Growth cost per employee?",
+    "expected_source": "01_pricing.md",
+    "expected_section": "Plans",
+    "type": "single_document",
+    "note": "13_pricing_old.md also retrieves; only the model can tell current from superseded"
+  },
+  {
+    "id": 2,
+    "question": "How much discount can a rep give without approval?",
+    "expected_source": "01_pricing.md",
+    "expected_section": "Discount policy",
+    "type": "single_document",
+    "note": "2025 card says 15 percent, current says 10 percent"
+  },
+  {
+    "id": 3,
+    "question": "Where is candidate data hosted?",
+    "expected_source": "04_security_gdpr.md",
+    "expected_section": "Hosting",
+    "type": "single_document",
+    "note": "clean single-source answer, AWS eu-central-1"
+  },
+  {
+    "id": 4,
+    "question": "How long is a Growth implementation?",
+    "expected_source": "10_implementation.md",
+    "expected_section": "Standard timeline",
+    "type": "single_document",
+    "note": "4 to 6 weeks; competitor docs also mention this figure"
+  },
+  {
+    "id": 5,
+    "question": "What is the severity 1 response time on Enterprise?",
+    "expected_source": "11_support_sla.md",
+    "expected_section": "Response targets",
+    "type": "single_document",
+    "note": "answer is inside a markdown table"
+  },
+  {
+    "id": 6,
+    "question": "Do we have a free plan?",
+    "expected_source": "14_faq_internal.md",
+    "expected_section": "Overview",
+    "type": "single_document",
+    "note": "FAQ has no subheadings, so the whole file is one or two chunks"
+  },
+  {
+    "id": 7,
+    "question": "How many integrations are included on Growth?",
+    "expected_source": "03_integrations.md",
+    "expected_section": "Integration limits by plan",
+    "type": "single_document",
+    "note": "01_pricing also states 5 integrations; either source is acceptable"
+  },
+  {
+    "id": 8,
+    "question": "A prospect on Personio says we are too expensive. What do I say?",
+    "expected_source": "05_objection_handling.md",
+    "expected_section": "\"We already use Personio\"",
+    "type": "multi_document",
+    "note": "a good answer needs 05_objection_handling and 06_competitor_personio together"
+  },
+  {
+    "id": 9,
+    "question": "Is a 150-person logistics company in Austria a fit, and what would they pay?",
+    "expected_source": "09_icp.md",
+    "expected_section": "Firmographics",
+    "type": "multi_document",
+    "note": "needs 09_icp for the size minimum and 01_pricing for the rate; 14_faq_internal covers the exception"
+  },
+  {
+    "id": 10,
+    "question": "Can a Dutch customer sync hires to their payroll?",
+    "expected_source": "03_integrations.md",
+    "expected_section": "Not available",
+    "type": "refusal",
+    "note": "correct answer is no native integration, export as CSV"
+  },
+  {
+    "id": 11,
+    "question": "What is the SAP SuccessFactors connector called?",
+    "expected_source": "03_integrations.md",
+    "expected_section": "Not available",
+    "type": "refusal",
+    "note": "no such connector exists; the model must not invent a name"
+  },
+  {
+    "id": 12,
+    "question": "How many customers does Hirelane have?",
+    "expected_source": null,
+    "expected_section": null,
+    "type": "refusal",
+    "note": "not in any document; retrieval will return weak matches and the model must say so"
+  },
+  {
+    "id": 13,
+    "question": "What is the CEO's phone number?",
+    "expected_source": null,
+    "expected_section": null,
+    "type": "refusal",
+    "note": "not in any document"
+  },
+  {
+    "id": 14,
+    "question": "What is the minimum company size for Core?",
+    "expected_source": "01_pricing.md",
+    "expected_section": "Plans",
+    "type": "conflict",
+    "note": "200 employees on the current card, 100 on the 2025 card; the model should prefer current and may flag the older terms"
+  },
+  {
+    "id": 15,
+    "question": "Can a customer be billed monthly?",
+    "expected_source": "01_pricing.md",
+    "expected_section": "Billing",
+    "type": "conflict",
+    "note": "no on the current card; the 2025 card allowed it on Core, and pre-2026 contracts keep those terms"
+  },
+  {
+    "id": 16,
+    "question": "What happens if a customer grows past their employee count mid-contract?",
+    "expected_source": "14_faq_internal.md",
+    "expected_section": "Overview",
+    "type": "single_document",
+    "note": "trued up at renewal, not billed mid-term"
+  }
+]

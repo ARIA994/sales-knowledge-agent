@@ -1,0 +1,58 @@
+[
+  {
+    "turn": 1,
+    "user_id": "anna",
+    "question": "What does Growth cost per employee?",
+    "expects": "EUR 7.00 per employee per month, 200 employee minimum",
+    "tests": "baseline, no history needed"
+  },
+  {
+    "turn": 2,
+    "user_id": "ben",
+    "question": "How long does implementation take?",
+    "expects": "Core 2 weeks, Growth 4 to 6 weeks, Enterprise 8 to 12 weeks",
+    "tests": "Ben's first turn: history must be empty even though Anna has rows"
+  },
+  {
+    "turn": 3,
+    "user_id": "anna",
+    "question": "What about Enterprise?",
+    "expects": "from EUR 9.50, 500 employee minimum",
+    "tests": "Anna's follow-up resolves to pricing, not to Ben's implementation topic"
+  },
+  {
+    "turn": 4,
+    "user_id": "ben",
+    "question": "What about Enterprise?",
+    "expects": "8 to 12 weeks implementation",
+    "tests": "same words, different user, different answer. The strongest isolation proof."
+  },
+  {
+    "turn": 5,
+    "user_id": "ben",
+    "question": "Why does it sometimes take longer?",
+    "expects": "customer has not decided their hiring process; SSO waiting on their IT team",
+    "tests": "Ben's thread continues correctly"
+  },
+  {
+    "turn": 6,
+    "user_id": "anna",
+    "question": "And the minimum company size for that one?",
+    "expects": "500 employees",
+    "tests": "'that one' still means Enterprise pricing, two turns back in Anna's thread"
+  },
+  {
+    "turn": 7,
+    "user_id": "anna",
+    "question": "What about Dutch payroll?",
+    "expects": "no native integration, export hires as CSV",
+    "tests": "topic jump: rewrite must not carry pricing context into this"
+  },
+  {
+    "turn": 8,
+    "user_id": "ben",
+    "question": "Can we migrate their data from Recruitee?",
+    "expects": "yes, candidates, jobs and stage history via CSV; interview notes do not migrate",
+    "tests": "Ben's thread, related but new topic"
+  }
+]
